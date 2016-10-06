@@ -1,0 +1,57 @@
+<%@ master language="C#" %>
+<script runat="server" language="c#">
+</script>
+
+
+<html>
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form runat="server">
+        <table id="Table1" cellspacing="1" cellpadding="1" width="100%" border="1">
+            <tr>
+                <td style="WIDTH: 12px">
+                </td>
+                <td>
+                    <p align="right">
+                        <asp:loginname id="LoginName1" runat="server" formatstring="You are signed in as: {0}">
+                        </asp:loginname>
+                        <asp:loginstatus id="LoginStatus1" runat="server">
+                        </asp:loginstatus>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" nowrap width="150">
+                    <asp:loginview id="LoginView1" runat="server">
+                        <anonymoustemplate>
+                            Links:<br />
+                            <asp:hyperlink runat="server" navigateurl="~/Default.aspx">Main</asp:hyperlink>
+                            <br />
+                            <asp:hyperlink runat="server" navigateurl="~/Register.aspx">Register User</asp:hyperlink>
+                        </anonymoustemplate>
+                        <rolegroups>
+                            <asp:rolegroup roles="Admins,SuperUsers">
+                                <contenttemplate>
+                                    Links:<br /><asp:hyperlink runat="server" navigateurl="~/Default.aspx">Main</asp:hyperlink><br /><asp:hyperlink runat="server" navigateurl="~/ProtectedArea/Default.aspx" id="Hyperlink2">Protected Area</asp:hyperlink><br />
+                            <asp:hyperlink runat="server" navigateurl="~/AdminArea/Default.aspx">Admin Area</asp:hyperlink>
+                                </contenttemplate>
+                            </asp:rolegroup>
+                        </rolegroups>
+                        <loggedintemplate>
+                            Links:<br />
+                            <asp:hyperlink runat="server" navigateurl="~/Default.aspx">Main</asp:hyperlink><br />
+                            <asp:hyperlink runat="server" navigateurl="~/ProtectedArea/Default.aspx">Protected Area</asp:hyperlink>
+                        </loggedintemplate>
+                    </asp:loginview>
+                </td>
+                <td valign="top">
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

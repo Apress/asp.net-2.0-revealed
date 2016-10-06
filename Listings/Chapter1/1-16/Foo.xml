@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Foo
+</name>
+</assembly>
+<members>
+<member name="M:Foo.ReturnSomeString(System.String)">
+	<summary>This methods return the text passed as parameter</summary>
+	<param name="Text">Text to be returned</param>
+	<returns>Returns the string passed as <paramref name="Text"/> parameter</returns>
+</member><member name="T:Foo">
+	<summary>That's my little foo class</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,22 @@
+<%@ master language="C#" %>
+
+<script runat="server">
+  
+void Page_PreRender(object sender, System.EventArgs e)
+{
+    this.LT_HtmlTitle.Text = ((TitledPage)this.Page).Title;
+}
+    
+</script>
+
+<html>
+<head runat="server">
+    <title><ASP:Literal id="LT_HtmlTitle" runat="server" /></title>
+</head>
+<body>
+    <form runat="server">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<%@ Image class="CircleGenerator" Language="C#" %>
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Web.UI.Imaging;
+
+public class CircleGenerator : ImageGenerator
+{
+    protected override void RenderImage(Graphics g)
+    {
+        int width = (int)Style.Width.Value;
+        int height = (int)Style.Height.Value;
+        int w = Math.Max(DefaultWidth, width);
+        int h = Math.Max(DefaultHeight, height);
+        
+        g.FillRectangle(Brushes.White, g.ClipBounds);
+        
+        int numberOfCircles = 1;
+        
+        if (Parameters["NumberOfCircles"] != null)
+        {
+            numberOfCircles = Int32.Parse(Parameters["NumberOfCircles"].ToString());
+        }
+        
+        g.SmoothingMode = SmoothingMode.AntiAlias;
+        Random random = new Random();
+        
+        for (int i = 0; i < numberOfCircles; i++)
+        {
+            int x = random.Next(w);
+            int y = random.Next(h);
+            int circleWidth = random.Next(w/2);
+            int circleHeight = random.Next(h/2);
+            int penWidth = random.Next(5);
+            Color c = Color.FromArgb(random.Next(255),random.Next(255),random.Next(255));
+            g.DrawEllipse(new Pen(c,penWidth),x,y,circleWidth,circleHeight); 
+        }
+    }
+}

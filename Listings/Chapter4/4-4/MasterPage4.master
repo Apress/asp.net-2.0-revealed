@@ -1,0 +1,20 @@
+<%@ master language="C#" %>
+
+<script runat="server">
+    public string HtmlTitle {    
+        get { return this.LT_HtmlTitle.Text; }    
+        set { this.LT_HtmlTitle.Text = value; }
+    }
+</script>
+
+<html>
+<head runat="server">
+    <title><ASP:Literal id="LT_HtmlTitle" runat="server" /></title>
+</head>
+<body>
+    <form runat="server">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </form>
+</body>
+</html>

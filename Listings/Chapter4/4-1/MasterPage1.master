@@ -1,0 +1,35 @@
+<%@ master language="C#" %>
+
+<script runat="server">
+
+</script>
+
+<html>
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form runat="server">
+        <table id="Table1" cellspacing="1" cellpadding="1" width="100%" border="1">
+            <tr>
+                <td colspan="2">
+                    <h1>My Little Company</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>Navigation?</td>
+                <td>
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

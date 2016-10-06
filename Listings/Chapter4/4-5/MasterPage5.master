@@ -1,0 +1,15 @@
+<%@ master language="C#" master="~/MasterMasterPage5.master" %> 
+
+<asp:content id="Content1" contentplaceholderid="MainContent" runat="server">
+   <asp:panel runat="server" id="panelMain" backcolor="lightyellow">
+   <h2>Child master</h2>
+      <asp:panel runat="server" id="panel1" backcolor="lightblue">
+        <p>This is childmaster content.</p>
+        <asp:contentplaceholder id="Content1" runat="server" />
+      </asp:panel>
+      <asp:panel runat="server" id="panel2" backcolor="pink">
+         <p>This is childmaster content.</p>
+         <asp:contentplaceholder id="Content2" runat="server" />
+      </asp:panel>
+   </asp:panel>
+</asp:content>

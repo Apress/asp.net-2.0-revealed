@@ -1,0 +1,79 @@
+<%@ master language="C#" %>
+
+<script runat="server">
+    
+    void Page_Load(object sender, System.EventArgs e)
+    {
+        if (SiteMap.CurrentNode != null) {    
+            this.LT_HtmlTitle.Text = SiteMap.CurrentNode.Title;
+        }
+    }
+    
+</script>
+
+<html>
+<head id="Head1" runat="server">
+    <title><ASP:Literal id="LT_HtmlTitle" runat="server"/></title>
+</head>
+<body>
+    <form id="Form1" runat="server">
+        <table id="Table1" cellspacing="1" cellpadding="1" width="100%" border="1">
+            <tr>
+                <td colspan="2">
+                    <h1>My Little Company</h1>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:datalist id="DataList1" runat="server" repeatdirection="Horizontal" datasourceid="SiteMapDataSource2">
+                        <itemtemplate>
+                            <asp:hyperlink id="HyperLink1" runat="server" navigateurl='<%# DataBinder.Eval(Container.DataItem, "url") %>' text='<%# DataBinder.Eval(Container.DataItem, "title") %>'>
+                            </asp:hyperlink>
+                        </itemtemplate>
+                    </asp:datalist>
+                    <asp:sitemapdatasource id="SiteMapDataSource2" runat="server" sitemapviewtype="Flat" flatdepth="2">
+                    </asp:sitemapdatasource>
+                    <br />
+                    You are here:
+                    <asp:sitemappath id="Node" runat="server">
+                    </asp:sitemappath>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <asp:treeview id="TreeView1" runat="server" font-underline="False" datasourceid="SiteMapDataSource1" initialexpanddepth="2" font-names="Verdana" font-size="8pt" font-italic="False" font-bold="False" imageset="MSDN" forecolor="#000000" nodeindent="16" backcolor="#EEEEEE">
+                        <selectednodestyle verticalpadding="1" bordercolor="#999999" horizontalpadding="3"
+                            backcolor="#FFFFFF" font-underline="False" font-italic="False" font-bold="False"
+                            borderwidth="1px" borderstyle="Solid">
+                        </selectednodestyle>
+                        <hovernodestyle verticalpadding="1" bordercolor="#999999" horizontalpadding="3" backcolor="#C7C7C7"
+                            font-underline="True" font-italic="False" font-bold="False" borderwidth="1px"
+                            borderstyle="Solid">
+                        </hovernodestyle>
+                        <parentnodestyle font-underline="False" font-italic="False" font-bold="False">
+                        </parentnodestyle>
+                        <leafnodestyle font-underline="False" font-italic="False" font-bold="False">
+                        </leafnodestyle>
+                        <nodestyle font-underline="False" forecolor="#000000" verticalpadding="2" nodespacing="1" horizontalpadding="4" font-names="Verdana" font-size="8pt" font-italic="False" font-bold="False">
+                        </nodestyle>
+                        <rootnodestyle font-underline="False" font-italic="False" font-bold="False">
+                        </rootnodestyle>
+                    </asp:treeview>
+                    <asp:sitemapdatasource id="SiteMapDataSource1" runat="server" startingdepth="1">
+                    </asp:sitemapdatasource>
+                </td>
+                <td>
+                    <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+                    </asp:contentplaceholder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

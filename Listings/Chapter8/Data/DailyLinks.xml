@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<links>
+ <link>
+  <id>0</id>
+  <title>ASP.NET</title>
+  <url>http://www.asp.net</url>
+  </link>
+ <link>
+  <id>1</id>
+  <title>MSDN</title>
+  <url>http://msdn.microsoft.com</url>
+ </link>
+  <link>
+  <id>2</id>
+  <title>MSN</title>
+  <url>http://www.msn.com</url>
+ </link>
+ <link>
+  <id>3</id>
+  <title>MSNBC</title>
+  <url>http://www.msnbc.com</url>
+ </link>
+ <link>
+  <id>4</id>
+  <title>Google</title>
+  <url>http://www.google.com</url>
+ </link>
+</links>

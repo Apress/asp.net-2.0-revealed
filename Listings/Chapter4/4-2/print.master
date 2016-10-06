@@ -1,0 +1,19 @@
+<%@ master language="C#" %>
+
+<script runat="server">
+
+</script>
+
+<html>
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form runat="server">
+        This master can be used for printing.<br />
+        <br />
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+    </form>
+</body>
+</html>

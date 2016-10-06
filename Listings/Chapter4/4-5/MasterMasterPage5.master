@@ -1,0 +1,12 @@
+<%@ Master Language="C#" %> 
+<HTML>
+<BODY>
+<form id="Form1" runat=server>
+   <h1>Parent Master</h1>
+   <p>
+   <font color=red>This is Parent-master content.</font>
+   </P>
+<asp:contentplaceholder id="MainContent" runat=server/>
+</form>
+</HTML>
+</BODY>

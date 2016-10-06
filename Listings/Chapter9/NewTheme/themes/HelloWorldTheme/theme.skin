@@ -1,0 +1,42 @@
+<ASP:TreeView runat="server"
+    Font-Size="12"
+/>
+
+<ASP:GridView runat="server"
+    BorderColor="Red"
+    BorderWidth="3"
+    BorderStyle="Dashed"
+    >
+    
+    <HeaderStyle
+        BackColor="Red"
+        ForeColor="Yellow"
+        Font-Size="15"
+    />
+        
+    <RowStyle
+        ForeColor="Black"
+    />
+    
+</ASP:GridView>
+
+<ASP:GridView runat="server" SkinID="CommonGridView"
+    BorderColor="Black"
+    BorderWidth="1"
+    BorderStyle="Solid"
+    >
+    
+    <HeaderStyle
+        BackColor="Blue"
+        ForeColor="White"
+    />
+        
+    <RowStyle
+        ForeColor="Black"
+    />
+    
+    <AlternatingRowStyle
+        BackColor="#BBBBFF"
+    />
+    
+</ASP:GridView>

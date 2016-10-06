@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+   <siteMapNode title="Home" description="Home" url="default.aspx" >
+      <siteMapNode title="Products" description="Our products" 
+          url="Products.aspx">
+          <siteMapNode title="Hardware" description="Hardware choices"
+               url="navigation1.aspx" />
+          <siteMapNode title="Software" description="Software choices" 
+               url="navigation2.aspx" />
+      </siteMapNode>
+      <siteMapNode title="Services" description="Services we offer" 
+         url="Services.aspx">
+         <siteMapNode title="Training" description="Training classes" 
+             url="navigation3.aspx" />
+         <siteMapNode title="Consulting" description="Consulting services" 
+             url="navigation4.aspx"/>
+         <siteMapNode title="Support" 
+             description="Supports plans" 
+             url="navigation5.aspx" 
+             pagetitle="Here's a custom page title"
+         />
+      </siteMapNode>
+      <siteMapNode title="Admin" 
+          description="For admins only" 
+          url="admin.aspx" 
+          roles="SiteAdmin,SuperUser"
+      />
+   </siteMapNode>
+</siteMap>
